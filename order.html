@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sweet Dreams</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="header">
+                <div class="logocontact">
+                    <h1>SWEETDREAMS</h1>
+                    <p>tel: +1 617 459 2955</p>
+                </div>
+                <div class="sidenav">
+                    <ul>
+                        <li> <a href="https://www.facebook.com/">FACEBOOK</a> </li>
+                        <li> <a href="https://www.instagram.com">INSTOGRAM</a> </li>
+                        <li> <a href="https://www.youtube.com/">YOUTUBE</a> </li>
+                    </ul>
+                </div>
+
+                <nav class="mobile-menu">
+					<label for="show-menu" class="show-menu"><span>Menu</span><div class="lines"></div></label>
+					<input type="checkbox" id="show-menu">
+						<ul id="menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a>		</li>
+						<li><a href="order.html">Order</a>		</li>
+						<li><a href="about_us.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+            </div>
+            <div class="content">
+                <div class="aside">
+                    <div class="sidecontent">
+                        <h2>Why choose us</h2>
+                        <ul>
+                            <li><img src="img/sidecontent1.jpg" /> <a href="#">EASY CARE </a> <p> Washable covers on all pillows</p></li>
+                            <li><img src="img/sidecontent2.jpg" /><a href="#">5-YR LIMITED WARRANTY</a> <p>For free repair or replacement</p></li>
+                            <li><img src="img/sidecontent3.jpg" /> <a href="#">FREE SHIPPING</a><p>On all pillows</p> </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="section">
+                    <div class="maincontent1">
+                        <h2>ORDER PILLOWS</h2>
+
+                        <div>
+                            <form action="" method="POST" name="myForm" id="myForm">
+                                <h2>Place your order</h2>
+                                <div>
+                                    <label for="tiger"> EXTRA FIRM PILLOW $3</label>
+                                    <select id="tiger">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="monkey">FIRM PILLOW $3.50</label>
+                                    <select id="monkey">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="elephant">PILLOWCASES $12</label>
+                                    <select id="elephant">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="penguin">CUSTOM SHAPED PILLOW $12</label>
+                                    <select id="penguin">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                                <h3>Cost: </h3>
+                                
+                                    <input type="text" id="cost" value="0" readonly size="3"/>
+                                
+
+                                <div>
+                                    <input type="submit" />
+                                </div>
+                            </form>
+                        </div>
+                        <script type="text/javascript">
+                            function updateTotal() {
+                                var tot = 0;
+                                tot += f.tiger.value * 3 +
+                                        f.monkey.value * 3.5 +
+                                        f.elephant.value * 12 +
+                                        f.penguin.value * 12;
+                                document.getElementById("cost").value = tot.toFixed(2);
+                            }
+
+                            var f = document.forms['myForm'];
+                            var sel = document.getElementsByTagName("select");
+
+                            for (var i = 0; i < sel.length; i++) {
+                                sel[i].onchange = function () {
+                                    updateTotal()
+                                };
+                            }
+
+                            f.onsubmit = function () {
+                                alert("Your total cost will be: \\$" + f.cost.value);
+                                return false;
+                            }
+                        </script>
+
+                        <div>
+                            <div class="w3content" >
+                                <img class="mySlides" src="img/sale1.jpg" style="width:100%">
+                                <img class="mySlides" src="img/sale2.jpg" style="width:100%">
+                                <img class="mySlides" src="img/sale3.jpg" style="width:100%">
+                                <img class="mySlides" src="img/sale4.jpg" style="width:100%">
+                            </div>
+
+                            <div class="w3center">
+
+                                <button class="w3button" onclick="currentDiv(1)">Extra firm</button> 
+                                <button class="w3button" onclick="currentDiv(2)">Firm</button> 
+                                <button class="w3button" onclick="currentDiv(3)">Pillowcased</button> 
+                                <button class="w3button" onclick="currentDiv(4)">Sheped pillow</button> 
+                            </div>
+
+                            <script>
+                                var slideIndex = 1;
+                                showDivs(slideIndex);
+
+
+                                function currentDiv(n) {
+                                    showDivs(slideIndex = n);
+                                }
+
+                                function showDivs(n) {
+                                    var i;
+                                    var x = document.getElementsByClassName("mySlides");
+                                    var dots = document.getElementsByClassName("demo");
+                                    if (n > x.length) {
+                                        slideIndex = 1
+                                    }
+                                    if (n < 1) {
+                                        slideIndex = x.length
+                                    }
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" w3-red", "");
+                                    }
+                                    x[slideIndex - 1].style.display = "block";
+                                    dots[slideIndex - 1].className += " w3-red";
+                                }
+                            </script>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="wrap">
+                <p> SWEETDREAMS.com © 2018 | ZHANA VELESKA </p>
+            </div>
+        </div>
+    </body>
+</html>

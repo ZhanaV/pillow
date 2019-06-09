@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title><b>Sweet Dreams</b></title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+
+    <body>
+        <div class="wrap">
+
+
+            <div class="header">
+                <div class="logocontact">
+                    <h1>SWEET DREAMS</h1>
+                    <p>mob: +1 617 459 2959</p>
+                </div>
+                <div class="sidenav">
+                    <ul>
+                        <li> <a href="https://www.facebook.com/">FACEBOOK</a> </li>
+                        <li> <a href="https://www.instagram.com">INSTOGRAM</a> </li>
+                        <li> <a href="https://www.youtube.com/">YOUTUBE</a> </li>
+                    </ul>
+                </div>
+
+                				
+				<nav class="mobile-menu">
+					<label for="show-menu" class="show-menu"><span>Menu</span><div class="lines"></div></label>
+					<input type="checkbox" id="show-menu">
+						<ul id="menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a>		</li>
+						<li><a href="order.html">Order</a>		</li>
+						<li><a href="about_us.html">About</a></li>
+						<li><a href="contact.html">Contact US</a></li>
+					</ul>
+				</nav>
+            </div>
+            <div class="content">
+                <div class="aside">
+                    <div class="sidecontent">
+                        <h2>Why choose us</h2>
+                        <ul>
+                            <li><img src="img/sidecontent1.jpg" /> <a href="#">EASY CARE </a> <p> Washable covers on all pillows</p></li>
+                            <li><img src="img/sidecontent2.jpg" /><a href="#">5-YR LIMITED WARRANTY</a> <p>For free repair or replacement</p></li>
+                            <li><img src="img/sidecontent3.jpg" /> <a href="#">FREE SHIPPING</a><p>On all pillows</p> </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="section">
+                    <div class="maincontent">
+
+
+
+
+                        <p  style="max-width:800px">
+
+                            <img class="mySlides" src="img/homeslider1.jpg" style="width:100%">
+                            <img class="mySlides" src="img/homeslider2.jpg" style="width:100%">
+                            <img class="mySlides" src="img/homeslider3.jpg" style="width:100%">
+                        </p>
+
+                        <script>
+                            var myIndex = 0;
+                            carousel();
+
+                            function carousel() {
+                                var i;
+                                var x = document.getElementsByClassName("mySlides");
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";
+                                }
+                                myIndex++;
+                                if (myIndex > x.length) {
+                                    myIndex = 1
+                                }
+                                x[myIndex - 1].style.display = "block";
+                                setTimeout(carousel, 2000); // Change image every 2 seconds
+                            }
+                        </script>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="wrap">
+                <p> SWEETDREAMS.com © 2018 | ZANA VEL </p>
+            </div>
+        </div>
+    </body>
+</html>
